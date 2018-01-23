@@ -1,0 +1,62 @@
+.title-newsong {
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 5px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.title-newsong h2{
+	font-family: "Open Sans","segoe ui",Helvetica,Arial,sans-serif;
+    margin: 10px;
+    text-align: center;
+    font-size: 25px!important;    
+
+}
+
+.hotsong {
+	margin: 0;
+	padding: 0;
+}
+
+.hotsong ul {
+	display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+
+.song {
+	padding: 10px;
+    border-bottom: solid 1px #ECECEC;
+    list-style: none;
+    text-align: -webkit-match-parent;
+}
+
+.rank-lable {
+	font-size: 22px;
+    top: 0;
+    left: -10px;
+    width: 30px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #666;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+.label-rank-status {
+    top: 20px;
+    left: 18px;
+    width: 62px;
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    float: left;
+}

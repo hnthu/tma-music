@@ -1,0 +1,23 @@
+.hotsong {
+    width: 700px;
+    height: 350px;
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+
+.col-xs-2{
+    background:#00f;
+    color:#FFF;
+    height: 52px;
+    width: 125px;
+    padding-left: 0;
+}
+.col-half-offset{
+    margin-left:2.322%;
+}
+
+.acitve-image {
+	margin: 5px auto;
+	width: 690px;
+}
