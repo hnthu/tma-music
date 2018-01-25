@@ -1,0 +1,37 @@
+<nav>
+    <div class="container group" id="myNavbar">
+        <div class="menubar">
+            <a href="/" title="Zing MP3 - Đỉnh cao âm nhạc" class="img">
+                    <img src="../assets/icon/homepage.png" alt="Home Page">
+            </a>
+        </div>
+        <div id="sug" class="section-search"> 
+            <ul class="main-nav group">
+
+            <li class="active"><a id="navbar-mymusic" class="fn-login" href="/mymusic" title="Nhạc cá nhân">Private Song</a> </li>  
+            <li><a id="navbar-top100" title="Top 100" [routerLink]="['/genre']">Genre</a>
+                <ul>
+                    <li><a title="Việt Nam" [routerLink]="['/genre']">EDM</a></li>
+                    <li><a title="Âu Mỹ" [routerLink]="['/genre']">Indie</a></li>
+                    <li><a title="Châu Á" [routerLink]="['/path']">Bolero</a></li>
+                    <li><a title="Hòa Tấu" [routerLink]="['/path']">Acoutic</a></li>
+                </ul>
+            </li>
+  
+            <li><a id="navbar-genreartist" title="Nghệ Sĩ" [routerLink]="['/path']">Singer</a>
+                <ul>
+                    <li><a title="Việt Nam" [routerLink]="['/path']">Việt Nam</a></li>
+                    <li><a title="Âu Mỹ" [routerLink]="['/path']">Âu Mỹ</a></li>
+                    <li><a title="Hàn Quốc" [routerLink]="['/path']">Hàn Quốc</a></li>
+                    <li><a title="Nhật Bản" [routerLink]="['/path']">Nhật Bản</a></li>
+                    <li><a title="Hao Ngữ" [routerLink]="['/path']">Hoa Ngữ</a></li>
+                    <li><a title="Hòa Tấu" [routerLink]="['/path']">Hòa Tấu</a></li>
+                </ul>
+            </li>
+
+
+              </ul>
+        
+        </div>
+    </div>
+</nav>

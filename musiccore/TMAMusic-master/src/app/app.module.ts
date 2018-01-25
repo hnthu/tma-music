@@ -11,6 +11,9 @@ import { FooterPageComponent } from './homepage/footerpage/footerpage.component'
 import { HotsongComponent } from './hotsong/hotsong.component';
 import { HotgenreComponent } from './hotgenre/hotgenre.component';
 import { NewsongComponent } from './newsong/newsong.component';
+import { HeaderpageComponent } from './homepage/headerpage/headerpage.component';
+import { TopmenubarComponent } from './topmenubar/topmenubar.component';
+import { MenubarComponent } from './menubar/menubar.component';
 
 
   const routes:Routes=[
@@ -35,6 +38,9 @@ import { NewsongComponent } from './newsong/newsong.component';
     HotsongComponent,
     HotgenreComponent,
     NewsongComponent,
+    HeaderpageComponent,
+    TopmenubarComponent,
+    MenubarComponent,
   ],
   imports: [
     BrowserModule,

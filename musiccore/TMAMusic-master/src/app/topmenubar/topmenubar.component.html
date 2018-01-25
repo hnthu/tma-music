@@ -1,0 +1,97 @@
+<header>
+    <div class="container group">
+        <div class="logo">
+            <a href="/" title="Zing MP3 - Đỉnh cao âm nhạc" class="hide-text">
+                <img src="" alt="TMA-Music">
+            </a>
+        </div>
+        <div id="sug" class="section-search">
+            <form action="/tim-kiem/bai-hat.html" method="get" class="search">
+                <input type="text" name="q" placeholder="Enter search content" class="input-txt" autocomplete="off">
+                <span class="input-btn">
+                     <a href="/" title="TMA_Music" class="">
+                        <!-- <img src="../assets/icon/magnifying-glass.png" alt="Home Page"> -->
+                     </a>
+                    <!-- <button type="submit" class="zicon btn hide-text">Tìm kiếm</button> -->
+                </span>
+            </form>
+        
+        </div>
+    
+        <div class="nav-account pull-right fn-guestbox">
+             <img class="" src="../assets/icon/user.png"> &nbsp;
+            <a class="fn-login" href="#" data-toggle="modal" 
+                data-target="#LoginForm" title="Đăng nhập"> Login |</a> 
+            <a class="fn-login" href="#" data-toggle="modal" 
+                data-target="#RegisterForm" title="Đăng xuất"> Register</a>
+        </div>
+    </div>
+
+</header>
+<div class="modal fade" id="LoginForm" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="ModalTitle">Login</h2>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+            </div>
+            <div class="modal-body">
+				<div class="row">
+			        <form role="form" class="form-horizontal">
+	                    <div class="form-group">
+		                      <div class="col-xs-12 col-sm-12  col-xs-push-2 ">
+		    					 <input type="text" class="form-control" name="username" placeholder="Username" required="" autofocus="" />
+		    				</div>
+							 <div class="col-xs-12 col-sm-12 col-xs-push-2 ">
+				                    <input type="password" class="form-control" name="password" placeholder="Password" required=""/> 
+				             </div>
+			           	</div>
+			            <div class="col-xs-12 col-sm-12 col-md-12 col-xs-push-5">
+			                <button type="submit" class="btn btn-primary">Submit</button>
+			            </div>
+			        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="RegisterForm" tabindex="-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+	    <div class="modal-content">
+		    <div class="modal-header">
+		        <h2 class="modal-title" id="ModalTitle">Register</h2>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		    </div>
+		    <div class="modal-body">
+		    	<div class="row">
+			        <form role="form" class="form-horizontal">
+				        <div class="form-group">
+				        	<div class="col-xs-12 col-sm-12  col-xs-push-2 ">
+				             	<input type="text" class="form-control" name="Username" placeholder="username" required="" autofocus="" />
+				        	</div>
+					        <div class="col-xs-12 col-sm-12  col-xs-push-2 ">
+					            <input type="password" class="form-control" name="Password" placeholder="password" required=""/> 
+					        </div>
+					        <div class="col-xs-12 col-sm-12  col-xs-push-2 repass" >
+					            <input type="text" class="form-control" name="repassword" placeholder="Retype password" required=""/> 
+					        </div>
+					        <div class="col-xs-12 col-sm-12  col-xs-push-2 ">
+					            <input type="email" class="form-control" name="password" placeholder="Email" required=""/> 
+					        </div>
+				        </div>
+				        <div class="col-xs-12 col-sm-12 col-md-12 col-xs-push-5">
+				            <button type="submit" class="btn btn-primary">Submit</button>
+				        </div>
+		    		</form>
+				</div>
+		    </div>
+	    </div>
+	</div>
+</div>
