@@ -27,6 +27,11 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
     runtime('org.springframework.boot:spring-boot-devtools')
     testCompile('org.springframework.boot:spring-boot-starter-test')
+    compile group: 'io.jsonwebtoken', name: 'jjwt', version: '0.7.0'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-jdbc', version: '1.5.9.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '1.5.9.RELEASE'
+    testCompile group: 'org.hsqldb', name: 'hsqldb', version: '2.4.0'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.8-dmr'
 }
 node {
     version = "6.11.3"
