@@ -1,0 +1,34 @@
+
+body{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+  font-weight: 400;
+  font-style: normal!important;
+  font-size: 14px;
+  font-family: "Roboto","segoe ui",Helvetica,Arial,sans-serif;
+  line-height: 1.42857;
+  min-width: 718px;
+  display: block;
+  overflow-y: scroll;
+}
+
+@media (max-width: 718px ) {
+  body{
+     overflow-y: inherit;
+  }
+}
+
+/*#homepage{
+  max-width: 100%;
+  min-width:700px;
+  margin: 0 auto;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+*/

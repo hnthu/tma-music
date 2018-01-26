@@ -1,0 +1,117 @@
+nav{
+    position: relative;
+    background: #e4e4e4;  
+    width: 100%;
+    height: 40px;
+    min-width: 1000px;
+    z-index: 900002!important;
+    display: block;
+}
+
+nav .container {
+    overflow: visible;
+    width: 1000px;
+}
+#myNavbar ul li a{
+    margin-right:5px;
+    color: #1c1c1c;
+    text-decoration: none;
+    font-size: 15px;
+    padding-left:12px;
+    padding-right: 12px;
+    }
+
+    #myNavbar ul li a:hover{
+    color: blue;
+    }
+
+ #myNavbar ul li a#navbar-mymusic{
+     margin-left: -110px;
+ }
+
+#navbar-top100:hover> ul{
+    display: block;
+}
+
+
+#myNavbar ul
+{
+  list-style:none;
+  position:relative;
+  float:left;
+  margin-left: 100px;
+  margin-top:-20px;
+  }
+
+#myNavbar ul a
+{
+  display:block;
+  text-decoration:none;
+  font-family: "Roboto","segoe ui",Helvetica,Arial,sans-serif;
+  line-height:40px;
+}
+
+#myNavbar ul li
+{
+  position:relative;
+  float:left;
+  margin:0;
+  padding:0
+}
+
+
+#myNavbar ul li ul
+{
+  display:none;
+  position:absolute;
+  top:100%;
+  left:0;
+  background:#fff;
+  padding:0;
+
+}
+
+#myNavbar ul li ul li
+{
+ position:relative;
+  float:left;
+  margin:0;
+  padding:0;
+  width: 150px;
+}
+
+#myNavbar ul ul li a:hover
+{
+  background-color: #e4e4e4;  
+ /* border-top: 1px solid #000;*/
+}
+
+#myNavbar ul ul a
+{
+  line-height:120%;
+  padding:10px 20px;
+}
+
+
+#myNavbar ul li a:hover
+{
+  display:block;
+  z-index:10000;
+   background-color: #fff;
+  position: relative;
+}
+
+
+#myNavbar ul li:hover > ul
+{
+  display:block;
+  z-index:10000;
+  border-radius:3px;
+  margin-left: 0px;
+  margin-top:0px;
+}
+
+#myNavbar ul ul li a:hover
+{
+   margin: 0px 0px;
+}
