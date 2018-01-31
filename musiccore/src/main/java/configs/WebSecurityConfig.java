@@ -21,6 +21,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable().authorizeRequests()
                 .antMatchers("/").permitAll()
+                .antMatchers("/inline.bundle.js").permitAll()
+                .antMatchers("/main.bundle.js").permitAll()
+                .antMatchers("/polyfills.bundle.js").permitAll()
+                .antMatchers("/styles.bundle.js").permitAll()
+                .antMatchers("/vendor.bundle.js").permitAll()
+                .antMatchers("/assets/icon/*").permitAll()
+                .antMatchers("/favicon.ico").permitAll()
                 .antMatchers(HttpMethod.POST, "/login").permitAll()
                 .antMatchers(HttpMethod.GET,"/greeting").hasAnyAuthority("ROLE_USER","ROLE_ADMIN")
                 .antMatchers(HttpMethod.GET,"/vipsongs").hasAnyAuthority("ROLE_ADMIN")

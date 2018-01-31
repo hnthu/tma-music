@@ -15,7 +15,13 @@ body{
   line-height: 1.42857;
   min-width: 718px;
   display: block;
+  overflow-y: scroll;
+}
 
+@media (max-width: 718px ) {
+  body{
+     overflow-y: inherit;
+  }
 }
 
 /*#homepage{

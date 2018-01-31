@@ -1,17 +1,20 @@
 .title-newsong {
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: 340;
     margin-bottom: 5px;
-    border-style: solid;
-    border-width: 1px;
+    margin-left: 10px;
+/*    border-style: solid;
+    border-width: 1px;*/
 }
 
-.title-newsong h2{
-	font-family: "Open Sans","segoe ui",Helvetica,Arial,sans-serif;
-    margin: 10px;
-    text-align: center;
-    font-size: 25px!important;    
-
+.title-newsong h3>a{
+    color: #2582be;
+    background: url(https://stc-id.nixcdn.com/v11/images/icon-repeat.png) right -155px no-repeat;
+    text-transform: uppercase;
+    padding: 0 20px 0 0;
+    font-weight: 340 !important;
+    transition: all 0.2s linear;
+    text-decoration: none;
 }
 
 .hotsong {
@@ -31,8 +34,8 @@
 
 .song {
 	padding: 10px;
-    border-bottom: solid 1px #ECECEC;
-    list-style: none;
+/*    border-bottom: solid 1px #ECECEC;
+*/    list-style: none;
     text-align: -webkit-match-parent;
 }
 
@@ -59,4 +62,83 @@
     color: #666;
     font-size: 14px;
     float: left;
+}
+
+.list-music {
+    width: 1000px;
+    float: left;
+}
+.fram_select {
+    width: 1000px;
+    float: left;
+    overflow: hidden;
+}
+
+.box-content-music-list {
+    position: relative;
+}
+.info_song {
+    float: left;
+    width: 400px;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.icon_listen {
+    position: absolute;
+    color: #999999;
+    right: 0;
+    font-size: 12px;
+    background: url(https://stc-id.nixcdn.com/v11/images/icon-repeat.png) left -194px no-repeat;
+    padding-left: 15px;
+    line-height: 24px;
+    display: block;
+    margin: 1px 0 0 0;
+}
+.name_song{
+    font-size: 14px;
+    float: left;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 24px;
+    color: #444444;
+    text-decoration: none;
+    font-weight: 550;
+
+}
+.name_song:hover{
+    color: #2582be;
+}
+
+.name-singer {
+    font-size: 14px;
+    float: left;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 24px;
+    color: #999999;
+    text-decoration: none;
+}
+
+.name-singer:hover{
+    color: #2582be;
+}
+.song {
+    list-style: none; 
+    width: 450px; 
+    float: left; 
+    margin-right: 30px; 
+    border-top: #ececec solid 1px; 
+    padding: 16px 0px; 
+    line-height: 24px;
+}
+
+li:hover{
+    background: #fbfdff;
 }
