@@ -217,12 +217,10 @@ var AppService = /** @class */ (function () {
         var options = new __WEBPACK_IMPORTED_MODULE_3__angular_http__["d" /* RequestOptions */]({ headers: headers });
         this._http.post('http://localhost:8080/login', params.toString(), options)
             .subscribe(function (res) {
-            _this.saveToken(res.headers);
+            _this.saveToken(res);
         }, function (err) { return alert("Invalid!"); });
     };
     AppService.prototype.saveToken = function (token) {
-        alert(JSON.stringify(token));
-        alert(token[2]);
         var expireDate = new Date().getTime() + (1000 * token.expires_in);
         __WEBPACK_IMPORTED_MODULE_2_ng2_cookies__["Cookie"].set("access_token", token.access_token, expireDate);
         this._router.navigate(['/']);
@@ -821,7 +819,7 @@ var TopmenubarComponent = /** @class */ (function () {
         this.isLoggedIn = true;
     };
     TopmenubarComponent.prototype.logout = function () {
-        this._service.logout();
+        //this._service.logout();
         this.isLoggedIn = false;
     };
     TopmenubarComponent = __decorate([

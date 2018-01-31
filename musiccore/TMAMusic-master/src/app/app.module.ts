@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {RouterModule, Routes,ActivatedRoute} from '@angular/router';
-import { FormsModule } from '@angular/forms'; 
+import { FormsModule } from '@angular/forms';
 import { OAuthModule } from 'angular-oauth2-oidc';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
@@ -22,7 +22,7 @@ import { AppService } from './app.service';
 
 
   const routes:Routes=[
-     
+
       {
        path:'',
        component: HomePageComponent
@@ -51,7 +51,7 @@ import { AppService } from './app.service';
     BrowserModule,
     RouterModule.forRoot(routes),
     FormsModule,
-    OAuthModule.forRoot(), 
+    OAuthModule.forRoot(),
     HttpModule,
     HttpClientModule,
   ],
