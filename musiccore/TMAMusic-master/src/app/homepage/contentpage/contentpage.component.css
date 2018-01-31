@@ -20,14 +20,12 @@
 .page-left {
 	width: 700px;
   float: left;
-  margin-top: 5px;
 }
 
 .page-right {
 	float: right;
   width: 300px;
   position: relative;
-  margin-top: 5px;
 }
 
 .page-bottom{
