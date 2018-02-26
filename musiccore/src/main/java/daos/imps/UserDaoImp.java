@@ -7,6 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -29,11 +32,11 @@ public class UserDaoImp implements UserDao {
 
     @Override
     public Set<User> getAll() {
-        return new HashSet<>(
-                    sessionFactory.getCurrentSession().createQuery(
-                    sessionFactory.getCurrentSession().getCriteriaBuilder().createQuery(User.class)
-            ).getResultList()
-        );
+        CriteriaBuilder builder =  sessionFactory.getCurrentSession().getCriteriaBuilder();
+        CriteriaQuery<User> query = builder.createQuery(User.class);
+        Root<User> variableRoot = query.from(User.class);
+        query.select(variableRoot);
+        return new HashSet<>(sessionFactory.getCurrentSession().createQuery(query).getResultList());
     }
 
     @Override
