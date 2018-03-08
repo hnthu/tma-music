@@ -1,21 +1,25 @@
 .title-hotgenre {
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: 340;
     margin-bottom: 5px;
-    border-style: solid;
-    border-width: 1px;
+    margin-top: -20px;
+    margin-left: 10px;
+/*    border-style: solid;
+    border-width: 1px;*/
 }
 
-.title-hotgenre h2{
-	font-family: "Open Sans","segoe ui",Helvetica,Arial,sans-serif;
-    margin: 10px;
-    text-align: center;
-    font-size: 25px!important;    
-
+.title-hotgenre h3>a{
+	color: #2582be;
+    background: url(https://stc-id.nixcdn.com/v11/images/icon-repeat.png) right -155px no-repeat;
+    text-transform: uppercase;
+    padding: 0 20px 0 0;
+    font-weight: 340 !important;
+    transition: all 0.2s linear;
+    text-decoration: none;
 }
 
 .hotgenre {
-	margin-bottom: 5px;
+	margin-bottom: 8px;
 }
 
 .img-responsive {

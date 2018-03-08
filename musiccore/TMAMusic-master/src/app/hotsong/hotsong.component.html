@@ -12,24 +12,8 @@
 
 		<!-- Wrapper for slides -->
 		<div class="carousel-inner">
-		  <div class="item active">
-		    <img src="../assets/icon/a.jpg" alt="Los Angeles" style="width:100%; height: 290px;">
-		  </div>
-
-		  <div class="item">
-		    <img src="../assets/icon/b.jpg" alt="Chicago" style="width:100%; height:  290px;">
-		  </div>
-
-		  <div class="item">
-		    <img src="../assets/icon/c.jpg" alt="New york" style="width:100%; height:  290px;">
-		  </div>
-
-		  <div class="item">
-		    <img src="../assets/icon/d.jpg" alt="New york" style="width:100%; height:  290px;">
-		  </div>
-
-		  <div class="item">
-		    <img src="../assets/icon/e.jpg" alt="New york" style="width:100%; height:  290px;">
+		  <div class="item" *ngFor="let song of hotsongs, let i = index" [ngClass]="{active :  i === 0 }">
+		    <img src="{{song.imageUrl}}" alt="Los Angeles" style="width:100%; height: 290px;">
 		  </div>
 		</div>
 
