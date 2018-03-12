@@ -9,7 +9,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ComponentScans;
 
 @EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
-@ComponentScan( basePackages = {"configs", "configurations", "controllers", "daos", "filters", "models", "services"})
+@ComponentScan( basePackages = {"configs", "configurations", "controllers", "daos", "filters", "models", "services", "common", "services"})
 @SpringBootApplication(exclude = { HibernateJpaAutoConfiguration.class})
 public class Application {
 

@@ -1,11 +1,21 @@
 package models;
 
+import javax.persistence.*;
 import java.util.Date;
 
+//@Entity
+//@Table(name = "song", catalog = "tmamusic", schema = "tmamusic")
 public class Song {
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.AUTO)
+//    @Column
     private String title;
+
+//    @Column
     private Date uploadDate;
+//    @Column
     private String genre;
+    private String fileName;
 
     public String getTitle() {
         return title;
@@ -39,9 +49,18 @@ public class Song {
         this.genre = genre;
     }
 
-    public Song(String title, Date uploadDate, String genre) {
+    public Song(String title, Date uploadDate, String genre, String fileName) {
         this.title = title;
         this.uploadDate = uploadDate;
         this.genre = genre;
+        this.fileName = fileName;
+    }
+
+    public String getFileName() {
+        return fileName;
+    }
+
+    public void setFileName(String fileName) {
+        this.fileName = fileName;
     }
 }
