@@ -1,47 +1,77 @@
 package models;
 
-import java.util.Date;
+import javax.persistence.*;
 
+
+@Entity
+@Table(name = "song")
 public class Song {
-    private String title;
-    private Date uploadDate;
-    private String genre;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
+    private int id;
+    @Column(name = "name")
+    private String name;
+    @Column(name = "source")
+    private String source;
+    @Column(name = "singer")
+    private String singer;
+    @Column(name = "author")
+    private String author;
 
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public Date getUploadDate() {
-        return uploadDate;
-    }
-
-    public void setUploadDate(Date uploadDate) {
-        this.uploadDate = uploadDate;
-    }
-
-    public String getGenre() {
-        return genre;
-    }
-
-    public void setGenre(String genre) {
-        this.genre = genre;
+    public Song(int id, String name, String source, String singer, String author) {
+        this.id = id;
+        this.name = name;
+        this.source = source;
+        this.singer = singer;
+        this.author = author;
     }
 
     public Song() {
     }
 
-    public Song(String title, String genre) {
-        this.title = title;
-        this.genre = genre;
+    public int getId() {
+        return id;
     }
 
-    public Song(String title, Date uploadDate, String genre) {
-        this.title = title;
-        this.uploadDate = uploadDate;
-        this.genre = genre;
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSource() {
+        return source;
+    }
+
+    public void setSource(String source) {
+        this.source = source;
+    }
+
+    public String getSinger() {
+        return singer;
+    }
+
+    public void setSinger(String singer) {
+        this.singer = singer;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
     }
 }

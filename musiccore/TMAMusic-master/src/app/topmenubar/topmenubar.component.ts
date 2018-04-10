@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   import { Component, OnInit } from '@angular/core';
 import {AppService} from '../app.service'
 
@@ -32,20 +31,3 @@ export class TopmenubarComponent implements OnInit {
     }
 
 }
-=======
-import { Component, OnInit } from '@angular/core';
-
-@Component({
-  selector: 'app-topmenubar',
-  templateUrl: './topmenubar.component.html',
-  styleUrls: ['./topmenubar.component.css']
-})
-export class TopmenubarComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-}
->>>>>>> e98b792efd54c336f69b5b9d99e681fd80c0d121

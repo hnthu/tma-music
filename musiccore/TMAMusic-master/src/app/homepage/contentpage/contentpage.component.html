@@ -1,5 +1,27 @@
 
 <div class="main-page">
+  <div _ngcontent-fls-2="" class="wrapper text-center" style="position: fixed; top: 50px; right: 30px;  z-index: 900003;background-color: rgba(0,0,0,0.6); border-radius: 5px; width: 180px;">
+    <button _ngcontent-fls-2="" class="btn"  (click)="previousAudio()" style="background-color: transparent; color: orange; border-color: orange; border-radius: 23.5px; font-size: 16.45px;">
+      <i _ngcontent-fls-2="" aria-hidden="true" class="fa fa-backward">
+      </i>
+    </button>
+    <div _ngcontent-fls-2="" class="btn-group">
+      <button _ngcontent-fls-2="" class="btn" (click)="playAudio()" style="background-color: transparent; color: orange; border-color: orange; font-size: 16.45px;">
+        <i *ngIf="isPlay" content-fls-2="" aria-hidden="true" class="fa fa-play">
+        </i>
+        <i *ngIf="!isPlay" _ngcontent-fls-2="" aria-hidden="true" class="fa fa-pause">
+        </i>
+      </button>
+      <button _ngcontent-fls-2="" class="btn" (click)="stopAudio()" style="background-color: transparent; color: orange; border-color: orange; font-size: 16.45px;">
+        <i _ngcontent-fls-2="" aria-hidden="true" class="fa fa-stop">
+        </i>
+      </button>
+    </div>
+    <button _ngcontent-fls-2="" class="btn"  (click)="nextAudio()" style="background-color: transparent; color: orange; border-color: orange; border-radius: 23.5px; font-size: 16.45px;">
+      <i _ngcontent-fls-2="" aria-hidden="true" class="fa fa-forward">
+      </i>
+    </button>
+  </div>
 	<div class="container page-content">
 		<div class="page-left">
 			<app-hotsong></app-hotsong>
@@ -10,6 +32,5 @@
 		<div class="page-bottom">
 			<app-newsong></app-newsong>
 		</div>
-			  
 	</div>
 </div>

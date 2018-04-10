@@ -1,32 +1,70 @@
 package controllers;
 
 import models.Song;
+import services.SongService;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
 @RestController
 public class SongsController {
-    @RequestMapping(method = RequestMethod.GET,value = "/songs")
-    @PreAuthorize("hasAnyAuthority(\"ROLE_USER\",\"ROLE_ADMIN\")")
-    public List<Song> Songs() {
-        Song song1 = new Song("Just the way you are","Country");
-        ArrayList<Song> listSong = new ArrayList<>();
-        listSong.add(song1);
-        return listSong;
+    private SongService songService;
+
+    @Autowired(required=true)
+    public void setSongService(SongService ps){
+        this.songService = ps;
     }
-    @RequestMapping(method = RequestMethod.GET,value = "/vipsongs")
-    @PreAuthorize("hasAnyAuthority(\"ROLE_ADMIN\")")
-    public List<Song> Vipsongs() {
-        Song song1 = new Song("Vip song","Classical");
-        song1.setUploadDate(new Date());
-        ArrayList<Song> listSong = new ArrayList<>();
-        listSong.add(song1);
-        return listSong;
+
+    @RequestMapping(value = "/song", method = RequestMethod.GET)
+    @PreAuthorize("permitAll()")
+    public Object listSong(Model model) {
+
+        return this.songService.listSong();
+    }
+
+    //For add and update song both
+    @RequestMapping(value= "/song/add", method = RequestMethod.POST)
+    @PreAuthorize("permitAll()")
+    public String addSong(@ModelAttribute("song") Song p){
+
+        if(p.getId() == 0){
+            //new person, add it
+            this.songService.addSong(p);
+        }else{
+            //existing songsss, call update
+            this.songService.updateSong(p);
+        }
+
+        return "redirect:/song";
+
+    }
+
+    @RequestMapping("/remove/{id}")
+    @PreAuthorize("permitAll()")
+    public String removeSong(@PathVariable("id") int id){
+
+        this.songService.removeSong(id);
+        System.out.print("" + id);
+        return "something";
+    }
+
+    @RequestMapping("/edit/{id}")
+    @PreAuthorize("permitAll()")
+    public Object editSong(@PathVariable("id") int id, Model model){
+        Song a = this.songService.getSongById(id);
+        this.songService.updateSong(a);
+        return "Updated successfully";
+    }
+
+    @RequestMapping("/get/{id}")
+    @PreAuthorize("permitAll()")
+    public String getSong(@PathVariable("id") int id, Model model){
+        model.addAttribute("song", this.songService.getSongById(id));
+        return "song";
     }
 }
